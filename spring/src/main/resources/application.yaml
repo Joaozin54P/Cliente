@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: crudJoao
+  data:
+    mongodb:
+      database: crud_db
+      host: localhost
+      port: 27017
+
+server:
+  port: 8081
