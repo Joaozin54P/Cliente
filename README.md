@@ -32,14 +32,18 @@ Desenvolver uma API para cadastro e gerenciamento de clientes, aplicando conceit
 
 ```bash
 
-src/main/java/com/github/Cliente
+Cliente
+├── domain
+│   └── src/main/java/com/github/cliente
+│       └── model
 │
-├── controller     # Recebe as requisições HTTP
-├── service        # Contém as regras de negócio
-├── repository     # Comunicação com o banco de dados
-├── model          # Estrutura dos dados (Cliente, Endereco)
-├── dto            # Objetos de entrada e saída (Request/Response)
-└── CrudJoaoApplication.java  # Classe principal
+└── spring
+    └── src/main/java/com/github/cliente
+        ├── controller
+        ├── dto
+        ├── repository
+        ├── service
+        └── CrudJoaoApplication.java
 ```
 ---
 
