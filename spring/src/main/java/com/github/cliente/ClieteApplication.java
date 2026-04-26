@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudJoaoApplication {
+public class ClieteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CrudJoaoApplication.class, args);
+        SpringApplication.run(ClieteApplication.class, args);
     }
 }

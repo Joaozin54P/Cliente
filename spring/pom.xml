@@ -44,7 +44,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.github.cliente.CrudJoaoApplication</mainClass>
+                    <mainClass>com.github.cliente.ClieteApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
