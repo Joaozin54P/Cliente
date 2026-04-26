@@ -1,38 +1,37 @@
-package com.github.Clientee.service;
+package com.github.cliente.service;
 
-import com.github.Clientee.model.cliente;
-import com.github.Clientee.repository.clienteRepository;
+import com.github.cliente.model.Cliente;
+import com.github.cliente.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class clienteService {
+public class ClienteService {
 
-    private final clienteRepository repository;
+    private final ClienteRepository repository;
 
-    public clienteService(clienteRepository repository) {
+    public ClienteService(ClienteRepository repository) {
         this.repository = repository;
     }
 
-    public cliente criar(cliente cliente) {
+    public Cliente criar(Cliente cliente) {
         return repository.save(cliente);
     }
 
-    public List<cliente> listar() {
+    public List<Cliente> listar() {
         return repository.findAll();
     }
 
-    public cliente buscarPorId(String id) {
+    public Cliente buscarPorId(String id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
     }
 
-    public cliente atualizar(String id, cliente novoCliente) {
-        cliente existente = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+    public Cliente atualizar(String id, Cliente novoCliente) {
+        Cliente existente = buscarPorId(id);
 
-        cliente atualizado = new cliente(
+        Cliente atualizado = new Cliente(
                 existente.id(),
                 novoCliente.nome(),
                 novoCliente.dtNascimento(),

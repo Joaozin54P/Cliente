@@ -1,7 +1,6 @@
-package com.github.Clientee.dto;
+package com.github.cliente.dto;
 
-
-public record clienteResponse(
+public record ClienteResponse(
         String id,
         String nome,
         String dtNascimento,

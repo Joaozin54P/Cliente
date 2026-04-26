@@ -1,5 +1,4 @@
-package com.github.Clientee.model;
-
+package com.github.cliente.model;
 
 public record Endereco(
         String logradouro,
